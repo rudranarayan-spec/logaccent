@@ -23,9 +23,9 @@
     "url": "git+https://github.com/rudranarayan-spec/logaccent.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/logaccent/issues"
+    "url": "https://github.com/rudranarayan-spec/logaccent/issues"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/logaccent#readme",
+  "homepage": "https://github.com/rudranarayan-spec/logaccent#readme",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -81,5 +81,13 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "provenance": true
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.7.0",
+    "prettier": "^3.9.5",
+    "publint": "^0.3.21",
+    "typescript-eslint": "^8.63.0"
   }
 }
