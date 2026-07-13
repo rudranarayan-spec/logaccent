@@ -10,8 +10,8 @@ export default defineConfig({
 
   format: ["esm", "cjs"],
 
-  // Generate declarations separately with TypeScript.
-  dts: false,
+  // Bundle public declarations and emit ESM/CJS declaration variants.
+  dts: true,
 
   sourcemap: true,
   clean: false,
@@ -21,4 +21,16 @@ export default defineConfig({
   target: "node18",
   outDir: "dist",
   cjsInterop: true,
+
+  outExtension({ format }) {
+    return format === "cjs"
+      ? {
+          js: ".cjs",
+          dts: ".d.cts",
+        }
+      : {
+          js: ".js",
+          dts: ".d.ts",
+        };
+  },
 });

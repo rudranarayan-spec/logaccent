@@ -32,24 +32,44 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./node": {
-      "types": "./dist/node.d.ts",
-      "import": "./dist/node.js",
-      "require": "./dist/node.cjs"
+      "import": {
+        "types": "./dist/node.d.ts",
+        "default": "./dist/node.js"
+      },
+      "require": {
+        "types": "./dist/node.d.cts",
+        "default": "./dist/node.cjs"
+      }
     },
     "./browser": {
-      "types": "./dist/browser.d.ts",
-      "import": "./dist/browser.js",
-      "require": "./dist/browser.cjs"
+      "import": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
+      },
+      "require": {
+        "types": "./dist/browser.d.cts",
+        "default": "./dist/browser.cjs"
+      }
     },
     "./noop": {
-      "types": "./dist/noop.d.ts",
-      "import": "./dist/noop.js",
-      "require": "./dist/noop.cjs"
+      "import": {
+        "types": "./dist/noop.d.ts",
+        "default": "./dist/noop.js"
+      },
+      "require": {
+        "types": "./dist/noop.d.cts",
+        "default": "./dist/noop.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
@@ -73,7 +93,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check:package": "publint && attw --pack",
+    "check:package": "publint && attw --pack --profile node16",
     "check": "npm run typecheck && npm run test && npm run build && npm run check:package",
     "prepublishOnly": "npm run check"
   },
@@ -91,6 +111,7 @@
     "prettier": "^3.9.5",
     "publint": "^0.3.21",
     "tsup": "^8.5.1",
+    "typescript": "5.9.3",
     "typescript-eslint": "^8.63.0",
     "vitest": "^4.1.10"
   }
