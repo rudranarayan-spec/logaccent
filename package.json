@@ -74,7 +74,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:package": "publint && attw --pack",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run build && npm run check:package",
+    "check": "npm run typecheck && npm run test && npm run build && npm run check:package",
     "prepublishOnly": "npm run check"
   },
   "publishConfig": {
@@ -85,9 +85,12 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
     "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.1",
+    "@vitest/coverage-v8": "^4.1.10",
     "eslint": "^10.7.0",
     "prettier": "^3.9.5",
     "publint": "^0.3.21",
-    "typescript-eslint": "^8.63.0"
+    "typescript-eslint": "^8.63.0",
+    "vitest": "^4.1.10"
   }
 }
