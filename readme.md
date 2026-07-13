@@ -37,7 +37,7 @@ npm install @rudranarayan/logaccent
 ## Quick Start
 
 ```ts
-import { accent, logger } from "@rudranarayan/logaccent";
+import { accent, logger } from "@rudranarayan01/logaccent";
 
 console.log(accent.red("Database connection failed"));
 
